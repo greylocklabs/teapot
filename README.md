@@ -20,7 +20,7 @@ $ npm install --save @greylocklabs/http
 
 ## Usage
 
-Here's a basic web server using the [Koa](https://koajs.com) framework as an example:
+Here's a basic web server using the [Koa](http://koajs.com) framework as an example:
 
 ```js
 import Koa from 'koa';
