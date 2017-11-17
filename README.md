@@ -58,8 +58,7 @@ More examples can be found [here](examples)!
 
 ## Documentation
 
-Read the [source code comments](src/index.js) or download the repository and open up [docs/index.html](docs/index.html)
-to view the documentation in your browser.
+The documentation can be viewed [here](https://doclets.io/greylocklabs/http/master).
 
 ## Contributing
 
