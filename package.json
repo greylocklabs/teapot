@@ -1,0 +1,65 @@
+{
+    "name": "@greylocklabs/http",
+    "version": "1.0.0",
+    "description": "Utilities for working with HTTP status codes, errors, and more",
+    "author": {
+        "name": "Ty-Lucas Kelley",
+        "email": "ty@greylocklabs.com",
+        "url": "https://tylucaskelley.com"
+    },
+    "homepage": "https://github.com/greylocklabs/http",
+    "bugs": "https://github.com/greylocklabs/http/issues",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/greylocklabs/http"
+    },
+    "license": "MIT",
+    "keywords": [
+        "http",
+        "error",
+        "status"
+    ],
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "babel src -d dist && npm run docs",
+        "docs": "rm -rf docs && jsdoc -c .jsdocrc --readme README.md --verbose",
+        "lint": "npm run lint:js && npm run lint:md",
+        "lint:js": "eslint src/**/*.js test/**/*.js",
+        "lint:md": "mdl -c .mdlrc README.md CHANGELOG.md .github",
+        "pretest": "npm run lint",
+        "test": "nyc ava test",
+        "prepublishOnly": "npm run build && npm test",
+        "precommit": "npm test",
+        "prepush": "npm test"
+    },
+    "engines": {
+        "node": ">= 6"
+    },
+    "ava": {
+        "require": "babel-register",
+        "babel": "inherit",
+        "verbose": true
+    },
+    "devDependencies": {
+        "@greylocklabs/eslint-config": "1.7.0",
+        "ava": "0.23.0",
+        "babel-cli": "6.26.0",
+        "babel-eslint": "8.0.2",
+        "babel-plugin-istanbul": "4.1.5",
+        "babel-preset-env": "1.6.1",
+        "eslint": "4.11.0",
+        "eslint-plugin-ava": "4.2.2",
+        "eslint-plugin-flowtype": "2.39.1",
+        "eslint-plugin-import": "2.8.0",
+        "eslint-plugin-promise": "3.6.0",
+        "eslint-plugin-security": "1.4.0",
+        "express": "4.16.2",
+        "husky": "0.14.3",
+        "ink-docstrap": "1.3.2",
+        "jsdoc": "3.5.5",
+        "jsdoc-babel": "0.3.0",
+        "koa": "2.4.1",
+        "koa-router": "7.3.0",
+        "nyc": "11.3.0"
+    }
+}

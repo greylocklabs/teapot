@@ -1,0 +1,18 @@
+{
+    "presets": [
+        [
+            "env",
+            {
+                "modules": "commonjs",
+                "targets": {
+                    "node": "6"
+                }
+            }
+        ]
+    ],
+    "env": {
+        "test": {
+            "plugins": [ "istanbul" ]
+        }
+    }
+}

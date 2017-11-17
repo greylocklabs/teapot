@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>@greylocklabs/http Class: ServiceUnavailableError</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.dark.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.united.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top ">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">@greylocklabs/http</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="module-errors_client.html">errors/client</a></li><li><a href="module-errors_server.html">errors/server</a></li><li><a href="module-status.html">status</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="ClientError.html">ClientError</a></li><li><a href="module-errors_client-BadRequestError.html">errors/client~BadRequestError</a></li><li><a href="module-errors_client-ConflictError.html">errors/client~ConflictError</a></li><li><a href="module-errors_client-ExpectationFailedError.html">errors/client~ExpectationFailedError</a></li><li><a href="module-errors_client-FailedDependencyError.html">errors/client~FailedDependencyError</a></li><li><a href="module-errors_client-ForbiddenError.html">errors/client~ForbiddenError</a></li><li><a href="module-errors_client-GoneError.html">errors/client~GoneError</a></li><li><a href="module-errors_client-ImATeapotError.html">errors/client~ImATeapotError</a></li><li><a href="module-errors_client-LengthRequiredError.html">errors/client~LengthRequiredError</a></li><li><a href="module-errors_client-LockedError.html">errors/client~LockedError</a></li><li><a href="module-errors_client-MethodNotAllowedError.html">errors/client~MethodNotAllowedError</a></li><li><a href="module-errors_client-MisdirectedRequestError.html">errors/client~MisdirectedRequestError</a></li><li><a href="module-errors_client-NotAcceptableError.html">errors/client~NotAcceptableError</a></li><li><a href="module-errors_client-NotFoundError.html">errors/client~NotFoundError</a></li><li><a href="module-errors_client-PayloadTooLargeError.html">errors/client~PayloadTooLargeError</a></li><li><a href="module-errors_client-PaymentRequiredError.html">errors/client~PaymentRequiredError</a></li><li><a href="module-errors_client-PreconditionFailedError.html">errors/client~PreconditionFailedError</a></li><li><a href="module-errors_client-PreconditionRequiredError.html">errors/client~PreconditionRequiredError</a></li><li><a href="module-errors_client-ProxyAuthenticationRequiredError.html">errors/client~ProxyAuthenticationRequiredError</a></li><li><a href="module-errors_client-RangeNotSatisfiableError.html">errors/client~RangeNotSatisfiableError</a></li><li><a href="module-errors_client-RequestHeaderFieldsTooLargeError.html">errors/client~RequestHeaderFieldsTooLargeError</a></li><li><a href="module-errors_client-RequestTimeoutError.html">errors/client~RequestTimeoutError</a></li><li><a href="module-errors_client-TooManyRequestsError.html">errors/client~TooManyRequestsError</a></li><li><a href="module-errors_client-UnauthorizedError.html">errors/client~UnauthorizedError</a></li><li><a href="module-errors_client-UnavailableForLegalReasonsError.html">errors/client~UnavailableForLegalReasonsError</a></li><li><a href="module-errors_client-UnorderedCollectionError.html">errors/client~UnorderedCollectionError</a></li><li><a href="module-errors_client-UnprocessableEntityError.html">errors/client~UnprocessableEntityError</a></li><li><a href="module-errors_client-UnsupportedMediaTypeError.html">errors/client~UnsupportedMediaTypeError</a></li><li><a href="module-errors_client-UpgradeRequiredError.html">errors/client~UpgradeRequiredError</a></li><li><a href="module-errors_client-UriTooLongError.html">errors/client~UriTooLongError</a></li><li><a href="module-errors_server-BadGatewayError.html">errors/server~BadGatewayError</a></li><li><a href="module-errors_server-BandwidthLimitExceededError.html">errors/server~BandwidthLimitExceededError</a></li><li><a href="module-errors_server-GatewayTimeoutError.html">errors/server~GatewayTimeoutError</a></li><li><a href="module-errors_server-HttpVersionNotSupportedError.html">errors/server~HttpVersionNotSupportedError</a></li><li><a href="module-errors_server-InsufficientStorageError.html">errors/server~InsufficientStorageError</a></li><li><a href="module-errors_server-InternalServerError.html">errors/server~InternalServerError</a></li><li><a href="module-errors_server-LoopDetectedError.html">errors/server~LoopDetectedError</a></li><li><a href="module-errors_server-NetworkAuthenticationRequiredError.html">errors/server~NetworkAuthenticationRequiredError</a></li><li><a href="module-errors_server-NotExtendedError.html">errors/server~NotExtendedError</a></li><li><a href="module-errors_server-NotImplementedError.html">errors/server~NotImplementedError</a></li><li><a href="module-errors_server-ServiceUnavailableError.html">errors/server~ServiceUnavailableError</a></li><li><a href="module-errors_server-VariantAlsoNegotiatesError.html">errors/server~VariantAlsoNegotiatesError</a></li><li><a href="ServerError.html">ServerError</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-8">
+	
+		<div id="main">
+			
+
+	<h1 class="page-title">Class: ServiceUnavailableError</h1>
+<section>
+
+<header>
+    
+        <h2>
+            <span class="ancestors"><a href="module-errors_server.html">errors/server</a>~</span>
+        
+        ServiceUnavailableError
+        </h2>
+        
+            <div class="class-description">Represents a 503 Service Unavailable response</div>
+        
+    
+</header>
+
+
+<article>
+    <div class="container-overview">
+    
+        
+<hr>
+<dt>
+    <h4 class="name" id="ServiceUnavailableError"><span class="type-signature"></span>new ServiceUnavailableError( [message] [, properties])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Creates a ServiceUnavailableError instance
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>message</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    'Service Unavailable'
+                
+                </td>
+            
+
+            <td class="description last">Error message</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>properties</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last">Extra error properties to add
+                <h6 class="method-params-label method-subparams-label">Properties</h6>
+                
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>expose</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    false
+                
+                </td>
+            
+
+            <td class="description last">Whether or not to expose error message to the client</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>props</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    {}
+                
+                </td>
+            
+
+            <td class="description last">Custom properties to add to error object</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="errors_server_index.js.html">errors/server/index.js</a>,
+				 <a href="errors_server_index.js.html#sunlight-1-line-127">line 127</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+    
+    </div>
+
+    
+        <h3 class="subsection-title">Extends</h3>
+
+        
+
+
+    <ul>
+        <li><a href="ServerError.html">ServerError</a></li>
+    </ul>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+		<div class="col-md-3">
+			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+		</div>
+	
+
+</div>
+</div>
+
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+
+<footer>
+
+
+	<span class="copyright">
+	Copyright (c) 2017 Greylock Labs. MIT License.
+	</span>
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
+	
+		on 2017-11-17T14:13:54-05:00
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
+</body>
+</html>

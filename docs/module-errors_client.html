@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>@greylocklabs/http Module: errors/client</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.dark.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.united.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top ">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">@greylocklabs/http</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="module-errors_client.html">errors/client</a></li><li><a href="module-errors_server.html">errors/server</a></li><li><a href="module-status.html">status</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="ClientError.html">ClientError</a></li><li><a href="module-errors_client-BadRequestError.html">errors/client~BadRequestError</a></li><li><a href="module-errors_client-ConflictError.html">errors/client~ConflictError</a></li><li><a href="module-errors_client-ExpectationFailedError.html">errors/client~ExpectationFailedError</a></li><li><a href="module-errors_client-FailedDependencyError.html">errors/client~FailedDependencyError</a></li><li><a href="module-errors_client-ForbiddenError.html">errors/client~ForbiddenError</a></li><li><a href="module-errors_client-GoneError.html">errors/client~GoneError</a></li><li><a href="module-errors_client-ImATeapotError.html">errors/client~ImATeapotError</a></li><li><a href="module-errors_client-LengthRequiredError.html">errors/client~LengthRequiredError</a></li><li><a href="module-errors_client-LockedError.html">errors/client~LockedError</a></li><li><a href="module-errors_client-MethodNotAllowedError.html">errors/client~MethodNotAllowedError</a></li><li><a href="module-errors_client-MisdirectedRequestError.html">errors/client~MisdirectedRequestError</a></li><li><a href="module-errors_client-NotAcceptableError.html">errors/client~NotAcceptableError</a></li><li><a href="module-errors_client-NotFoundError.html">errors/client~NotFoundError</a></li><li><a href="module-errors_client-PayloadTooLargeError.html">errors/client~PayloadTooLargeError</a></li><li><a href="module-errors_client-PaymentRequiredError.html">errors/client~PaymentRequiredError</a></li><li><a href="module-errors_client-PreconditionFailedError.html">errors/client~PreconditionFailedError</a></li><li><a href="module-errors_client-PreconditionRequiredError.html">errors/client~PreconditionRequiredError</a></li><li><a href="module-errors_client-ProxyAuthenticationRequiredError.html">errors/client~ProxyAuthenticationRequiredError</a></li><li><a href="module-errors_client-RangeNotSatisfiableError.html">errors/client~RangeNotSatisfiableError</a></li><li><a href="module-errors_client-RequestHeaderFieldsTooLargeError.html">errors/client~RequestHeaderFieldsTooLargeError</a></li><li><a href="module-errors_client-RequestTimeoutError.html">errors/client~RequestTimeoutError</a></li><li><a href="module-errors_client-TooManyRequestsError.html">errors/client~TooManyRequestsError</a></li><li><a href="module-errors_client-UnauthorizedError.html">errors/client~UnauthorizedError</a></li><li><a href="module-errors_client-UnavailableForLegalReasonsError.html">errors/client~UnavailableForLegalReasonsError</a></li><li><a href="module-errors_client-UnorderedCollectionError.html">errors/client~UnorderedCollectionError</a></li><li><a href="module-errors_client-UnprocessableEntityError.html">errors/client~UnprocessableEntityError</a></li><li><a href="module-errors_client-UnsupportedMediaTypeError.html">errors/client~UnsupportedMediaTypeError</a></li><li><a href="module-errors_client-UpgradeRequiredError.html">errors/client~UpgradeRequiredError</a></li><li><a href="module-errors_client-UriTooLongError.html">errors/client~UriTooLongError</a></li><li><a href="module-errors_server-BadGatewayError.html">errors/server~BadGatewayError</a></li><li><a href="module-errors_server-BandwidthLimitExceededError.html">errors/server~BandwidthLimitExceededError</a></li><li><a href="module-errors_server-GatewayTimeoutError.html">errors/server~GatewayTimeoutError</a></li><li><a href="module-errors_server-HttpVersionNotSupportedError.html">errors/server~HttpVersionNotSupportedError</a></li><li><a href="module-errors_server-InsufficientStorageError.html">errors/server~InsufficientStorageError</a></li><li><a href="module-errors_server-InternalServerError.html">errors/server~InternalServerError</a></li><li><a href="module-errors_server-LoopDetectedError.html">errors/server~LoopDetectedError</a></li><li><a href="module-errors_server-NetworkAuthenticationRequiredError.html">errors/server~NetworkAuthenticationRequiredError</a></li><li><a href="module-errors_server-NotExtendedError.html">errors/server~NotExtendedError</a></li><li><a href="module-errors_server-NotImplementedError.html">errors/server~NotImplementedError</a></li><li><a href="module-errors_server-ServiceUnavailableError.html">errors/server~ServiceUnavailableError</a></li><li><a href="module-errors_server-VariantAlsoNegotiatesError.html">errors/server~VariantAlsoNegotiatesError</a></li><li><a href="ServerError.html">ServerError</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-8">
+	
+		<div id="main">
+			
+
+	<h1 class="page-title">Module: errors/client</h1>
+<section>
+
+<header>
+    
+</header>
+
+
+<article>
+    <div class="container-overview">
+    
+        
+            <div class="description">Classes for client-side (4xx) errors</div>
+        
+
+        
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+	<dt class="tag-author method-doc-label method-doc-details-label">Author:</dt>
+	<dd class="tag-author">
+		<ul>
+			<li>Ty-Lucas Kelley &lt;ty@greylocklabs.com> (https://greylocklabs.com)</li>
+			</ul>
+	</dd>
+	
+
+	
+	<dt class="tag-copyright method-doc-label method-doc-details-label">Copyright:</dt>
+	<dd class="tag-copyright">
+		<ul class="dummy">
+			<li>Copyright (c) 2017 Greylock Labs. See LICENSE file for details.</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="errors_client_index.js.html">errors/client/index.js</a>,
+				 <a href="errors_client_index.js.html#sunlight-1-line-59">line 59</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Classes</h3>
+
+        <dl>
+            <dt><a href="module-errors_client-BadRequestError.html">BadRequestError</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-errors_client-ConflictError.html">ConflictError</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-errors_client-ExpectationFailedError.html">ExpectationFailedError</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-errors_client-FailedDependencyError.html">FailedDependencyError</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-errors_client-ForbiddenError.html">ForbiddenError</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-errors_client-GoneError.html">GoneError</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-errors_client-ImATeapotError.html">ImATeapotError</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-errors_client-LengthRequiredError.html">LengthRequiredError</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-errors_client-LockedError.html">LockedError</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-errors_client-MethodNotAllowedError.html">MethodNotAllowedError</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-errors_client-MisdirectedRequestError.html">MisdirectedRequestError</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-errors_client-NotAcceptableError.html">NotAcceptableError</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-errors_client-NotFoundError.html">NotFoundError</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-errors_client-PayloadTooLargeError.html">PayloadTooLargeError</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-errors_client-PaymentRequiredError.html">PaymentRequiredError</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-errors_client-PreconditionFailedError.html">PreconditionFailedError</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-errors_client-PreconditionRequiredError.html">PreconditionRequiredError</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-errors_client-ProxyAuthenticationRequiredError.html">ProxyAuthenticationRequiredError</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-errors_client-RangeNotSatisfiableError.html">RangeNotSatisfiableError</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-errors_client-RequestHeaderFieldsTooLargeError.html">RequestHeaderFieldsTooLargeError</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-errors_client-RequestTimeoutError.html">RequestTimeoutError</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-errors_client-TooManyRequestsError.html">TooManyRequestsError</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-errors_client-UnauthorizedError.html">UnauthorizedError</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-errors_client-UnavailableForLegalReasonsError.html">UnavailableForLegalReasonsError</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-errors_client-UnorderedCollectionError.html">UnorderedCollectionError</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-errors_client-UnprocessableEntityError.html">UnprocessableEntityError</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-errors_client-UnsupportedMediaTypeError.html">UnsupportedMediaTypeError</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-errors_client-UpgradeRequiredError.html">UpgradeRequiredError</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-errors_client-UriTooLongError.html">UriTooLongError</a></dt>
+            <dd></dd>
+        </dl>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+		<div class="col-md-3">
+			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+		</div>
+	
+
+</div>
+</div>
+
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+
+<footer>
+
+
+	<span class="copyright">
+	Copyright (c) 2017 Greylock Labs. MIT License.
+	</span>
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
+	
+		on 2017-11-17T14:13:53-05:00
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
+</body>
+</html>
