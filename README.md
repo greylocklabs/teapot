@@ -58,7 +58,8 @@ More examples can be found [here](examples)!
 
 ## Documentation
 
-TBD
+Read the [source code comments](src/index.js) or download the repository and open up [docs/index.html](docs/index.html)
+to view the documentation in your browser.
 
 ## Contributing
 
