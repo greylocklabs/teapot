@@ -10,6 +10,16 @@ All notable changes to this project will be documented in this file. The format 
 
 - N/A
 
+## [1.0.1](https://github.com/greylocklabs/http/compare/1.0.0...1.0.1) - 2017-11-18
+
+### Changed
+
+- Minor changes to NPM scripts
+
+### Removed
+
+- No longer generating JSDoc files, using Doclets instead
+
 ## [1.0.0](https://github.com/greylocklabs/http/releases/tag/1.0.0) - 2017-11-17
 
 ### Added
