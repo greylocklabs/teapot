@@ -2,6 +2,9 @@
 
 Utilities for working with HTTP status codes, errors, and more
 
+[![Build Status](https://travis-ci.org/greylocklabs/http.svg?branch=master)](https://travis-ci.org/greylocklabs/http)
+[![Coverage Status](https://coveralls.io/repos/github/greylocklabs/http/badge.svg?branch=master)](https://coveralls.io/github/greylocklabs/http?branch=master)
+
 ---
 
 This package provides a series of useful Node.js modules meant for use in web servers. The following libraries are
