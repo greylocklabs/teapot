@@ -2,6 +2,7 @@
 
 Utilities for working with HTTP status codes, errors, and more
 
+[![npm version](https://badge.fury.io/js/%40greylocklabs%2Fhttp.svg)](https://badge.fury.io/js/%40greylocklabs%2Fhttp)
 [![Build Status](https://travis-ci.org/greylocklabs/http.svg?branch=master)](https://travis-ci.org/greylocklabs/http)
 [![Coverage Status](https://coveralls.io/repos/github/greylocklabs/http/badge.svg?branch=master)](https://coveralls.io/github/greylocklabs/http?branch=master)
 
