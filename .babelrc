@@ -1,5 +1,7 @@
 {
+    "plugins": [ "add-module-exports" ],
     "presets": [
+        "flow",
         [
             "env",
             {

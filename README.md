@@ -1,6 +1,6 @@
 # HTTP
 
-Utilities for working with HTTP status codes, errors, and more
+> Utilities for working with HTTP status codes, errors, and more
 
 [![npm version](https://badge.fury.io/js/%40greylocklabs%2Fhttp.svg)](https://badge.fury.io/js/%40greylocklabs%2Fhttp)
 [![Build Status](https://travis-ci.org/greylocklabs/http.svg?branch=master)](https://travis-ci.org/greylocklabs/http)

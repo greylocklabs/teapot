@@ -57,11 +57,7 @@ to ensure you aren't duplicating anyone's work. Then, do the following:
 
 Please follow the coding style conventions detailed below:
 
-1. Conform to the Greylock Labs [JavaScript Style Guide](https://github.com/greylocklabs/js) and use our provided
-   [ESLint configuration](https://www.npmjs.com/package/@greylocklabs/eslint-config) to check your JS code via the
-   `npm run lint:js` command.
-2. All Markdown files should pass [Markdownlint](https://github.com/markdownlint/markdownlint) checks, which can be
-   run using the `npm run lint:md` command.
+Just ensure that `npm run lint && npm run flow` passes and you're all set!
 
 [1]: mailto:ty@greylocklabs.com
 [2]: https://github.com/greylocklabs/http/issues/new

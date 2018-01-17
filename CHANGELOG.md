@@ -6,9 +6,16 @@ All notable changes to this project will be documented in this file. The format 
 
 ---
 
-## [Unreleased](https://github.com/greylocklabs/http/compare/1.0.0...HEAD)
+## [Unreleased](https://github.com/greylocklabs/http/compare/1.1.0...HEAD)
 
 - N/A
+
+## [1.1.0](https://github.com/greylocklabs/http/compare/1.0.1...1.1.0) - 2018-01-17
+
+### Changed
+
+- Switch to Node.js Markdown linting tool
+- Update packages
 
 ## [1.0.1](https://github.com/greylocklabs/http/compare/1.0.0...1.0.1) - 2017-11-18
 
