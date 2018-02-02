@@ -14,6 +14,10 @@ included:
 1. [`status`](src/status) - HTTP status code utilities
 2. [`errors`](src/errors) - Custom HTTP errors for use in Koa, Express, etc.
 
+Additionally, a `createError(statusCode, message)` function is provided so you can easily create the
+correct `ClientError` or `ServerError` from an HTTP status code. Useful in cases where you're interacting
+with a third-party API and might not know what status codes to expect. See below for examples.
+
 ## Installation
 
 Install using `npm`:
@@ -51,6 +55,10 @@ router.get('/404', () => {
 
 router.get('/500', () => {
     throw new errors.InternalServerError('Something broke!');
+});
+
+router.get('/:code', (ctx, next) => {
+    if ()
 });
 
 app.use(router.routes());

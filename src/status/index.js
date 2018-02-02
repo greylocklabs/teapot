@@ -1,5 +1,5 @@
 /**
- * @file Exports status() function
+ * @file Exports status() function and other useful utilities and constants
  * @module status
  *
  * @author Ty-Lucas Kelley <ty@greylocklabs.com> (https://greylocklabs.com)

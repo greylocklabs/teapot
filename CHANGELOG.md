@@ -6,9 +6,25 @@ All notable changes to this project will be documented in this file. The format 
 
 ---
 
-## [Unreleased](https://github.com/greylocklabs/http/compare/1.1.0...HEAD)
+## [Unreleased](https://github.com/greylocklabs/http/compare/1.2.0...HEAD)
 
 - N/A
+
+## [1.2.0](https://github.com/greylocklabs/http/compare/1.1.0...1.2.0) - 2018-02-01
+
+### Added
+
+- A new `createError` function! It lets you take a status code and create the proper `ClientError`
+  or `ServerError` that goes with it. Examples:
+    - `const err = clientError(404, 'My not found message');`
+- Update dependencies
+- Examples updated to use `createError`
+- More tests
+
+### Changed
+
+- Classes that inherit `ClientError` or `ServerError` now have a static `code` method to get the
+  HTTP status code associated with the error. For example, `NotFoundError.code() === 404`
 
 ## [1.1.0](https://github.com/greylocklabs/http/compare/1.0.1...1.1.0) - 2018-01-17
 

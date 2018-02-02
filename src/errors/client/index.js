@@ -65,6 +65,16 @@ export class BadRequestError extends ClientError {
     constructor(message = status[status.BAD_REQUEST], { expose = true, props = {} } = {}) {
         super(status.BAD_REQUEST, message, { expose, props });
     }
+
+    /**
+     * Returns status code associated with Error object
+     * @public
+     *
+     * @returns {number} HTTP status code
+     */
+    static code() {
+        return status.BAD_REQUEST;
+    }
 }
 
 /**
@@ -83,6 +93,16 @@ export class UnauthorizedError extends ClientError {
      */
     constructor(message = status[status.UNAUTHORIZED], { expose = true, props = {} } = {}) {
         super(status.UNAUTHORIZED, message, { expose, props });
+    }
+
+    /**
+     * Returns status code associated with Error object
+     * @public
+     *
+     * @returns {number} HTTP status code
+     */
+    static code() {
+        return status.UNAUTHORIZED;
     }
 }
 
@@ -103,6 +123,16 @@ export class PaymentRequiredError extends ClientError {
     constructor(message = status[status.PAYMENT_REQUIRED], { expose = true, props = {} } = {}) {
         super(status.PAYMENT_REQUIRED, message, { expose, props });
     }
+
+    /**
+     * Returns status code associated with Error object
+     * @public
+     *
+     * @returns {number} HTTP status code
+     */
+    static code() {
+        return status.PAYMENT_REQUIRED;
+    }
 }
 
 /**
@@ -121,6 +151,16 @@ export class ForbiddenError extends ClientError {
      */
     constructor(message = status[status.FORBIDDEN], { expose = true, props = {} } = {}) {
         super(status.FORBIDDEN, message, { expose, props });
+    }
+
+    /**
+     * Returns status code associated with Error object
+     * @public
+     *
+     * @returns {number} HTTP status code
+     */
+    static code() {
+        return status.FORBIDDEN;
     }
 }
 
@@ -141,6 +181,16 @@ export class NotFoundError extends ClientError {
     constructor(message = status[status.NOT_FOUND], { expose = true, props = {} } = {}) {
         super(status.NOT_FOUND, message, { expose, props });
     }
+
+    /**
+     * Returns status code associated with Error object
+     * @public
+     *
+     * @returns {number} HTTP status code
+     */
+    static code() {
+        return status.NOT_FOUND;
+    }
 }
 
 /**
@@ -159,6 +209,16 @@ export class MethodNotAllowedError extends ClientError {
      */
     constructor(message = status[status.METHOD_NOT_ALLOWED], { expose = true, props = {} } = {}) {
         super(status.METHOD_NOT_ALLOWED, message, { expose, props });
+    }
+
+    /**
+     * Returns status code associated with Error object
+     * @public
+     *
+     * @returns {number} HTTP status code
+     */
+    static code() {
+        return status.METHOD_NOT_ALLOWED;
     }
 }
 
@@ -179,6 +239,16 @@ export class NotAcceptableError extends ClientError {
     constructor(message = status[status.NOT_ACCEPTABLE], { expose = true, props = {} } = {}) {
         super(status.NOT_ACCEPTABLE, message, { expose, props });
     }
+
+    /**
+     * Returns status code associated with Error object
+     * @public
+     *
+     * @returns {number} HTTP status code
+     */
+    static code() {
+        return status.NOT_ACCEPTABLE;
+    }
 }
 
 /**
@@ -197,6 +267,16 @@ export class ProxyAuthenticationRequiredError extends ClientError {
      */
     constructor(message = status[status.PROXY_AUTHENTICATION_REQUIRED], { expose = true, props = {} } = {}) {
         super(status.PROXY_AUTHENTICATION_REQUIRED, message, { expose, props });
+    }
+
+    /**
+     * Returns status code associated with Error object
+     * @public
+     *
+     * @returns {number} HTTP status code
+     */
+    static code() {
+        return status.PROXY_AUTHENTICATION_REQUIRED;
     }
 }
 
@@ -217,6 +297,16 @@ export class RequestTimeoutError extends ClientError {
     constructor(message = status[status.REQUEST_TIMEOUT], { expose = true, props = {} } = {}) {
         super(status.REQUEST_TIMEOUT, message, { expose, props });
     }
+
+    /**
+     * Returns status code associated with Error object
+     * @public
+     *
+     * @returns {number} HTTP status code
+     */
+    static code() {
+        return status.REQUEST_TIMEOUT;
+    }
 }
 
 /**
@@ -235,6 +325,16 @@ export class ConflictError extends ClientError {
      */
     constructor(message = status[status.CONFLICT], { expose = true, props = {} } = {}) {
         super(status.CONFLICT, message, { expose, props });
+    }
+
+    /**
+     * Returns status code associated with Error object
+     * @public
+     *
+     * @returns {number} HTTP status code
+     */
+    static code() {
+        return status.CONFLICT;
     }
 }
 
@@ -255,6 +355,16 @@ export class GoneError extends ClientError {
     constructor(message = status[status.GONE], { expose = true, props = {} } = {}) {
         super(status.GONE, message, { expose, props });
     }
+
+    /**
+     * Returns status code associated with Error object
+     * @public
+     *
+     * @returns {number} HTTP status code
+     */
+    static code() {
+        return status.GONE;
+    }
 }
 
 /**
@@ -273,6 +383,16 @@ export class LengthRequiredError extends ClientError {
      */
     constructor(message = status[status.LENGTH_REQUIRED], { expose = true, props = {} } = {}) {
         super(status.LENGTH_REQUIRED, message, { expose, props });
+    }
+
+    /**
+     * Returns status code associated with Error object
+     * @public
+     *
+     * @returns {number} HTTP status code
+     */
+    static code() {
+        return status.LENGTH_REQUIRED;
     }
 }
 
@@ -293,6 +413,16 @@ export class PreconditionFailedError extends ClientError {
     constructor(message = status[status.PRECONDITION_FAILED], { expose = true, props = {} } = {}) {
         super(status.PRECONDITION_FAILED, message, { expose, props });
     }
+
+    /**
+     * Returns status code associated with Error object
+     * @public
+     *
+     * @returns {number} HTTP status code
+     */
+    static code() {
+        return status.PRECONDITION_FAILED;
+    }
 }
 
 /**
@@ -311,6 +441,16 @@ export class PayloadTooLargeError extends ClientError {
      */
     constructor(message = status[status.PAYLOAD_TOO_LARGE], { expose = true, props = {} } = {}) {
         super(status.PAYLOAD_TOO_LARGE, message, { expose, props });
+    }
+
+    /**
+     * Returns status code associated with Error object
+     * @public
+     *
+     * @returns {number} HTTP status code
+     */
+    static code() {
+        return status.PAYLOAD_TOO_LARGE;
     }
 }
 
@@ -331,6 +471,16 @@ export class UriTooLongError extends ClientError {
     constructor(message = status[status.URI_TOO_LONG], { expose = true, props = {} } = {}) {
         super(status.URI_TOO_LONG, message, { expose, props });
     }
+
+    /**
+     * Returns status code associated with Error object
+     * @public
+     *
+     * @returns {number} HTTP status code
+     */
+    static code() {
+        return status.URI_TOO_LONG;
+    }
 }
 
 /**
@@ -349,6 +499,16 @@ export class UnsupportedMediaTypeError extends ClientError {
      */
     constructor(message = status[status.UNSUPPORTED_MEDIA_TYPE], { expose = true, props = {} } = {}) {
         super(status.UNSUPPORTED_MEDIA_TYPE, message, { expose, props });
+    }
+
+    /**
+     * Returns status code associated with Error object
+     * @public
+     *
+     * @returns {number} HTTP status code
+     */
+    static code() {
+        return status.UNSUPPORTED_MEDIA_TYPE;
     }
 }
 
@@ -369,6 +529,16 @@ export class RangeNotSatisfiableError extends ClientError {
     constructor(message = status[status.RANGE_NOT_SATISFIABLE], { expose = true, props = {} } = {}) {
         super(status.RANGE_NOT_SATISFIABLE, message, { expose, props });
     }
+
+    /**
+     * Returns status code associated with Error object
+     * @public
+     *
+     * @returns {number} HTTP status code
+     */
+    static code() {
+        return status.RANGE_NOT_SATISFIABLE;
+    }
 }
 
 /**
@@ -387,6 +557,16 @@ export class ExpectationFailedError extends ClientError {
      */
     constructor(message = status[status.EXPECTATION_FAILED], { expose = true, props = {} } = {}) {
         super(status.EXPECTATION_FAILED, message, { expose, props });
+    }
+
+    /**
+     * Returns status code associated with Error object
+     * @public
+     *
+     * @returns {number} HTTP status code
+     */
+    static code() {
+        return status.EXPECTATION_FAILED;
     }
 }
 
@@ -407,6 +587,16 @@ export class ImATeapotError extends ClientError {
     constructor(message = status[status.IM_A_TEAPOT], { expose = true, props = {} } = {}) {
         super(status.IM_A_TEAPOT, message, { expose, props });
     }
+
+    /**
+     * Returns status code associated with Error object
+     * @public
+     *
+     * @returns {number} HTTP status code
+     */
+    static code() {
+        return status.IM_A_TEAPOT;
+    }
 }
 
 /**
@@ -425,6 +615,16 @@ export class MisdirectedRequestError extends ClientError {
      */
     constructor(message = status[status.MISDIRECTED_REQUEST], { expose = true, props = {} } = {}) {
         super(status.MISDIRECTED_REQUEST, message, { expose, props });
+    }
+
+    /**
+     * Returns status code associated with Error object
+     * @public
+     *
+     * @returns {number} HTTP status code
+     */
+    static code() {
+        return status.MISDIRECTED_REQUEST;
     }
 }
 
@@ -445,6 +645,16 @@ export class UnprocessableEntityError extends ClientError {
     constructor(message = status[status.UNPROCESSABLE_ENTITY], { expose = true, props = {} } = {}) {
         super(status.UNPROCESSABLE_ENTITY, message, { expose, props });
     }
+
+    /**
+     * Returns status code associated with Error object
+     * @public
+     *
+     * @returns {number} HTTP status code
+     */
+    static code() {
+        return status.UNPROCESSABLE_ENTITY;
+    }
 }
 
 /**
@@ -463,6 +673,16 @@ export class LockedError extends ClientError {
      */
     constructor(message = status[status.LOCKED], { expose = true, props = {} } = {}) {
         super(status.LOCKED, message, { expose, props });
+    }
+
+    /**
+     * Returns status code associated with Error object
+     * @public
+     *
+     * @returns {number} HTTP status code
+     */
+    static code() {
+        return status.LOCKED;
     }
 }
 
@@ -483,6 +703,16 @@ export class FailedDependencyError extends ClientError {
     constructor(message = status[status.FAILED_DEPENDENCY], { expose = true, props = {} } = {}) {
         super(status.FAILED_DEPENDENCY, message, { expose, props });
     }
+
+    /**
+     * Returns status code associated with Error object
+     * @public
+     *
+     * @returns {number} HTTP status code
+     */
+    static code() {
+        return status.FAILED_DEPENDENCY;
+    }
 }
 
 /**
@@ -501,6 +731,16 @@ export class UnorderedCollectionError extends ClientError {
      */
     constructor(message = status[status.UNORDERED_COLLECTION], { expose = true, props = {} } = {}) {
         super(status.UNORDERED_COLLECTION, message, { expose, props });
+    }
+
+    /**
+     * Returns status code associated with Error object
+     * @public
+     *
+     * @returns {number} HTTP status code
+     */
+    static code() {
+        return status.UNORDERED_COLLECTION;
     }
 }
 
@@ -521,6 +761,16 @@ export class UpgradeRequiredError extends ClientError {
     constructor(message = status[status.UPGRADE_REQUIRED], { expose = true, props = {} } = {}) {
         super(status.UPGRADE_REQUIRED, message, { expose, props });
     }
+
+    /**
+     * Returns status code associated with Error object
+     * @public
+     *
+     * @returns {number} HTTP status code
+     */
+    static code() {
+        return status.UPGRADE_REQUIRED;
+    }
 }
 
 /**
@@ -539,6 +789,16 @@ export class PreconditionRequiredError extends ClientError {
      */
     constructor(message = status[status.PRECONDITION_REQUIRED], { expose = true, props = {} } = {}) {
         super(status.PRECONDITION_REQUIRED, message, { expose, props });
+    }
+
+    /**
+     * Returns status code associated with Error object
+     * @public
+     *
+     * @returns {number} HTTP status code
+     */
+    static code() {
+        return status.PRECONDITION_REQUIRED;
     }
 }
 
@@ -559,6 +819,16 @@ export class TooManyRequestsError extends ClientError {
     constructor(message = status[status.TOO_MANY_REQUESTS], { expose = true, props = {} } = {}) {
         super(status.TOO_MANY_REQUESTS, message, { expose, props });
     }
+
+    /**
+     * Returns status code associated with Error object
+     * @public
+     *
+     * @returns {number} HTTP status code
+     */
+    static code() {
+        return status.TOO_MANY_REQUESTS;
+    }
 }
 
 /**
@@ -578,6 +848,16 @@ export class RequestHeaderFieldsTooLargeError extends ClientError {
     constructor(message = status[status.REQUEST_HEADER_FIELDS_TOO_LARGE], { expose = true, props = {} } = {}) {
         super(status.REQUEST_HEADER_FIELDS_TOO_LARGE, message, { expose, props });
     }
+
+    /**
+     * Returns status code associated with Error object
+     * @public
+     *
+     * @returns {number} HTTP status code
+     */
+    static code() {
+        return status.REQUEST_HEADER_FIELDS_TOO_LARGE;
+    }
 }
 
 /**
@@ -596,5 +876,15 @@ export class UnavailableForLegalReasonsError extends ClientError {
      */
     constructor(message = status[status.UNAVAILABLE_FOR_LEGAL_REASONS], { expose = true, props = {} } = {}) {
         super(status.UNAVAILABLE_FOR_LEGAL_REASONS, message, { expose, props });
+    }
+
+    /**
+     * Returns status code associated with Error object
+     * @public
+     *
+     * @returns {number} HTTP status code
+     */
+    static code() {
+        return status.UNAVAILABLE_FOR_LEGAL_REASONS;
     }
 }
