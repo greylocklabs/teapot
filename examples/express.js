@@ -14,4 +14,6 @@ app.get('/errors/404', (req, res, next) => next(new errors.NotFoundError('Nothin
 app.get('/errors/500', (req, res, next) => next(new errors.InternalServerError('Something broke!')));
 app.get('/custom/:code', (req, res, next) => next(createError(req.params.code)));
 
-app.listen(3000);
+app.listen(3000, () => {
+    console.log('App listening on port 3000...');
+});

@@ -1,6 +1,6 @@
 {
     "name": "@greylocklabs/http",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "description": "Utilities for working with HTTP status codes, errors, and more",
     "author": {
         "name": "Ty-Lucas Kelley",
