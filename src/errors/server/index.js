@@ -65,6 +65,16 @@ export class InternalServerError extends ServerError {
     constructor(message = status[status.INTERNAL_SERVER_ERROR], { expose = false, props = {} } = {}) {
         super(status.INTERNAL_SERVER_ERROR, message, { expose, props });
     }
+
+    /**
+     * Returns status code associated with Error object
+     * @public
+     *
+     * @returns {number} HTTP status code
+     */
+    static code() {
+        return status.INTERNAL_SERVER_ERROR;
+    }
 }
 
 /**
@@ -83,6 +93,16 @@ export class NotImplementedError extends ServerError {
      */
     constructor(message = status[status.NOT_IMPLEMENTED], { expose = false, props = {} } = {}) {
         super(status.NOT_IMPLEMENTED, message, { expose, props });
+    }
+
+    /**
+     * Returns status code associated with Error object
+     * @public
+     *
+     * @returns {number} HTTP status code
+     */
+    static code() {
+        return status.NOT_IMPLEMENTED;
     }
 }
 
@@ -103,6 +123,16 @@ export class BadGatewayError extends ServerError {
     constructor(message = status[status.BAD_GATEWAY], { expose = false, props = {} } = {}) {
         super(status.BAD_GATEWAY, message, { expose, props });
     }
+
+    /**
+     * Returns status code associated with Error object
+     * @public
+     *
+     * @returns {number} HTTP status code
+     */
+    static code() {
+        return status.BAD_GATEWAY;
+    }
 }
 
 /**
@@ -121,6 +151,16 @@ export class ServiceUnavailableError extends ServerError {
      */
     constructor(message = status[status.SERVICE_UNAVAILABLE], { expose = false, props = {} } = {}) {
         super(status.SERVICE_UNAVAILABLE, message, { expose, props });
+    }
+
+    /**
+     * Returns status code associated with Error object
+     * @public
+     *
+     * @returns {number} HTTP status code
+     */
+    static code() {
+        return status.SERVICE_UNAVAILABLE;
     }
 }
 
@@ -141,6 +181,16 @@ export class GatewayTimeoutError extends ServerError {
     constructor(message = status[status.GATEWAY_TIMEOUT], { expose = false, props = {} } = {}) {
         super(status.GATEWAY_TIMEOUT, message, { expose, props });
     }
+
+    /**
+     * Returns status code associated with Error object
+     * @public
+     *
+     * @returns {number} HTTP status code
+     */
+    static code() {
+        return status.GATEWAY_TIMEOUT;
+    }
 }
 
 /**
@@ -159,6 +209,16 @@ export class HttpVersionNotSupportedError extends ServerError {
      */
     constructor(message = status[status.HTTP_VERSION_NOT_SUPPORTED], { expose = false, props = {} } = {}) {
         super(status.HTTP_VERSION_NOT_SUPPORTED, message, { expose, props });
+    }
+
+    /**
+     * Returns status code associated with Error object
+     * @public
+     *
+     * @returns {number} HTTP status code
+     */
+    static code() {
+        return status.HTTP_VERSION_NOT_SUPPORTED;
     }
 }
 
@@ -179,6 +239,16 @@ export class VariantAlsoNegotiatesError extends ServerError {
     constructor(message = status[status.VARIANT_ALSO_NEGOTIATES], { expose = false, props = {} } = {}) {
         super(status.VARIANT_ALSO_NEGOTIATES, message, { expose, props });
     }
+
+    /**
+     * Returns status code associated with Error object
+     * @public
+     *
+     * @returns {number} HTTP status code
+     */
+    static code() {
+        return status.VARIANT_ALSO_NEGOTIATES;
+    }
 }
 
 /**
@@ -197,6 +267,16 @@ export class InsufficientStorageError extends ServerError {
      */
     constructor(message = status[status.INSUFFICIENT_STORAGE], { expose = false, props = {} } = {}) {
         super(status.INSUFFICIENT_STORAGE, message, { expose, props });
+    }
+
+    /**
+     * Returns status code associated with Error object
+     * @public
+     *
+     * @returns {number} HTTP status code
+     */
+    static code() {
+        return status.INSUFFICIENT_STORAGE;
     }
 }
 
@@ -217,6 +297,16 @@ export class LoopDetectedError extends ServerError {
     constructor(message = status[status.LOOP_DETECTED], { expose = false, props = {} } = {}) {
         super(status.LOOP_DETECTED, message, { expose, props });
     }
+
+    /**
+     * Returns status code associated with Error object
+     * @public
+     *
+     * @returns {number} HTTP status code
+     */
+    static code() {
+        return status.LOOP_DETECTED;
+    }
 }
 
 /**
@@ -235,6 +325,16 @@ export class BandwidthLimitExceededError extends ServerError {
      */
     constructor(message = status[status.BANDWIDTH_LIMIT_EXCEEDED], { expose = false, props = {} } = {}) {
         super(status.BANDWIDTH_LIMIT_EXCEEDED, message, { expose, props });
+    }
+
+    /**
+     * Returns status code associated with Error object
+     * @public
+     *
+     * @returns {number} HTTP status code
+     */
+    static code() {
+        return status.BANDWIDTH_LIMIT_EXCEEDED;
     }
 }
 
@@ -255,6 +355,16 @@ export class NotExtendedError extends ServerError {
     constructor(message = status[status.NOT_EXTENDED], { expose = false, props = {} } = {}) {
         super(status.NOT_EXTENDED, message, { expose, props });
     }
+
+    /**
+     * Returns status code associated with Error object
+     * @public
+     *
+     * @returns {number} HTTP status code
+     */
+    static code() {
+        return status.NOT_EXTENDED;
+    }
 }
 
 /**
@@ -273,5 +383,15 @@ export class NetworkAuthenticationRequiredError extends ServerError {
      */
     constructor(message = status[status.NETWORK_AUTHENTICATION_REQUIRED], { expose = false, props = {} } = {}) {
         super(status.NETWORK_AUTHENTICATION_REQUIRED, message, { expose, props });
+    }
+
+    /**
+     * Returns status code associated with Error object
+     * @public
+     *
+     * @returns {number} HTTP status code
+     */
+    static code() {
+        return status.NETWORK_AUTHENTICATION_REQUIRED;
     }
 }

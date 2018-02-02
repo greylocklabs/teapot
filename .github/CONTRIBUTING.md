@@ -57,7 +57,7 @@ to ensure you aren't duplicating anyone's work. Then, do the following:
 
 Please follow the coding style conventions detailed below:
 
-Just ensure that `npm run lint && npm run flow` passes and you're all set!
+1. Just ensure that `npm run lint && npm run flow` passes and you're all set!
 
 [1]: mailto:ty@greylocklabs.com
 [2]: https://github.com/greylocklabs/http/issues/new
