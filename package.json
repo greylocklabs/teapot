@@ -1,17 +1,17 @@
 {
-    "name": "@greylocklabs/http",
-    "version": "1.2.0",
+    "name": "node-teapot",
+    "version": "2.0.0",
     "description": "Utilities for working with HTTP status codes, errors, and more",
     "author": {
         "name": "Ty-Lucas Kelley",
         "email": "ty@greylocklabs.com",
         "url": "https://greylocklabs.com"
     },
-    "homepage": "https://github.com/greylocklabs/http",
-    "bugs": "https://github.com/greylocklabs/http/issues",
+    "homepage": "https://github.com/greylocklabs/teapot",
+    "bugs": "https://github.com/greylocklabs/teapot/issues",
     "repository": {
         "type": "git",
-        "url": "https://github.com/greylocklabs/http"
+        "url": "https://github.com/greylocklabs/teapot"
     },
     "license": "MIT",
     "keywords": [
@@ -22,6 +22,9 @@
         "express"
     ],
     "main": "dist/index.js",
+    "files": [
+        "dist"
+    ],
     "scripts": {
         "reinstall": "rimraf node_modules && npm install",
         "clean": "rimraf dist",
@@ -47,7 +50,7 @@
         "verbose": true
     },
     "devDependencies": {
-        "@greylocklabs/eslint-config": "1.9.1",
+        "@greylocklabs/eslint-config": "1.10.0",
         "ava": "0.25.0",
         "babel-cli": "6.26.0",
         "babel-eslint": "8.2.1",

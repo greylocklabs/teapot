@@ -5,14 +5,12 @@
  * @copyright Copyright (c) 2017-2018 Greylock Labs. See LICENSE file for details.
  */
 
-import * as errors from './errors';
 import status from './status';
-
-/** fill the map with relationships between status codes and errors */
+import * as errors from './errors';
 
 const errorMap = new Map();
 
-for (const e in errors) { // eslint-disable-line guard-for-in
+for (const e in errors) {
     const proto = errors[e].prototype;
     if (proto instanceof errors.ClientError || proto instanceof errors.ServerError) {
         errorMap.set(errors[e].code(), errors[e]);
@@ -20,28 +18,32 @@ for (const e in errors) { // eslint-disable-line guard-for-in
 }
 
 /**
- * Create an instance of the correct HTTP error class from a status code
- * @public
- *
- * @param {string|number} statusCode - A 4xx or 5xx HTTP status code
- * @param {string} [message=*] - Optional error message; default depends on error
- * @param {Object} [properties] - Error properties to apply
- * @param {boolean} [properties.expose=*] - Whether or not to expose error to client; default depends on error
- * @param {Object} [properties.props] - Other properties to add to the created error
- *
- * @returns {ClientError|ServerError} HTTP error class instance
- *
- * @throws {Error} Thrown if statusCode is not 4xx or 5xx
+ * Module exports
+ * @type {Object}
  */
-const createError = (statusCode, message, { expose, props } = {}) => {
-    if (!status.error(statusCode)) {
-        throw new Error(`Status code ${statusCode} is not a 4xx or 5xx HTTP error`);
-    }
+const teapot = {
+    status,
 
-    const code = status(statusCode);
-    const HTTPError = errorMap.get(code);
+    /**
+     * Create an HTTPError from a status code
+     * @public
+     *
+     * @param {number|string} code - Status code
+     * @param {string} message - Error message
+     * @param {Object} [properties] - Optional error properties
+     * @param {boolean} [properties.expose] - Whether or not to expose error to clients that support this property
+     * @param {Object} [props] - Extra properties to add to the Error object
+     *
+     * @returns {HTTPError} Subclass of ClientError or ServerError
+     */
+    error(code, message, { expose, props } = {}) {
+        if (!status.error(code)) {
+            throw new Error(`Invalid status code ${code} - must be 4xx or 5xx`);
+        }
 
-    return new HTTPError(message, { expose, props });
+        const Err = errorMap.get(status(code));
+        return new Err(message, { expose, props });
+    },
 };
 
-export { createError, errors, status };
+export default Object.assign(teapot, errors);
