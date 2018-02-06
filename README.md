@@ -22,7 +22,7 @@ Teapot is an HTTP utility library for Node. It provides the following:
 
 ## Installation
 
-Install using `npm`:
+Install using `npm` (requires Node.js 7+ to work):
 
 ```bash
 $ npm install node-teapot

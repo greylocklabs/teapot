@@ -26,6 +26,7 @@ const addStatusCodesAndMessages = (func) => {
 
         func[msg] = num;
         func[msg.toLowerCase()] = num;
+        func[msg.toUpperCase()] = num;
         func[num] = msg;
         func[code] = msg;
 
@@ -154,6 +155,7 @@ status.codes.errorCodes = status.codes.filter((code) => /4|5/.test(code.toString
 status.CONTINUE = 100;
 status.SWITCHING_PROTOCOLS = 101;
 status.PROCESSING = 102;
+status.EARLY_HINTS = 103;
 
 status.OK = 200;
 status.CREATED = 201;

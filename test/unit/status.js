@@ -52,6 +52,8 @@ test('teapot.status(x) throws an Error when x is not an HTTP status code or corr
 test('teapot.status(x) returns the correct status code for all default HTTP status code messages', (t) => {
     Object.keys(http.STATUS_CODES).forEach((code) => {
         t.is(teapot.status(http.STATUS_CODES[code]), Number.parseInt(code));
+        t.is(teapot.status(http.STATUS_CODES[code].toLowerCase()), Number.parseInt(code));
+        t.is(teapot.status(http.STATUS_CODES[code].toUpperCase()), Number.parseInt(code));
     });
 });
 
