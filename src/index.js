@@ -37,7 +37,7 @@ const teapot = {
      * @returns {HTTPError} Subclass of ClientError or ServerError
      */
     error(code, message, { expose, props } = {}) {
-        if (!status.error(code)) {
+        if (!status.isError(code)) {
             throw new Error(`Invalid status code ${code} - must be 4xx or 5xx`);
         }
 

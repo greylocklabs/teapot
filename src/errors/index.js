@@ -35,7 +35,7 @@ export class HTTPError extends Error {
 
         this.expose = expose; // for koa
 
-        if (!status.error(code)) {
+        if (!status.isError(code)) {
             throw new Error(`Invalid status code ${code} - must be 4xx or 5xx`);
         }
 
@@ -70,7 +70,7 @@ export class ClientError extends HTTPError {
     constructor(code, message, { expose = true, props = {} } = {}) {
         super(code, message, { expose, props });
 
-        if (!status.clientError(code)) {
+        if (!status.isClientError(code)) {
             throw new Error(`Invalid status code ${code} - must be `);
         }
     }
@@ -96,7 +96,7 @@ export class ServerError extends HTTPError {
     constructor(code, message, { expose = false, props = {} } = {}) {
         super(code, message, { expose, props });
 
-        if (!status.serverError(code)) {
+        if (!status.isServerError(code)) {
             throw new Error(`Invalid status code ${code} - must be `);
         }
     }
@@ -514,9 +514,9 @@ export class PayloadTooLargeError extends ClientError {
  * Represents a 414 URI Too Long response
  * @extends ClientError
  */
-export class UriTooLongError extends ClientError {
+export class URITooLongError extends ClientError {
     /**
-     * Creates a UriTooLongError instance
+     * Creates a URITooLongError instance
      * @public
      *
      * @param {string} [message='URI Too Long'] - Error message
@@ -1096,9 +1096,9 @@ export class GatewayTimeoutError extends ServerError {
  * Represents a 505 HTTP Version Not Supported response
  * @extends ServerError
  */
-export class HttpVersionNotSupportedError extends ServerError {
+export class HTTPVersionNotSupportedError extends ServerError {
     /**
-     * Creates a HttpVersionNotSupportedError instance
+     * Creates a HTTPVersionNotSupportedError instance
      * @public
      *
      * @param {string} [message='HTTP Version Not Supported'] - Error message
