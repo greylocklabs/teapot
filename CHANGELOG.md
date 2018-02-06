@@ -6,11 +6,25 @@ All notable changes to this project will be documented in this file. The format 
 
 ---
 
-## [Unreleased](https://github.com/greylocklabs/http/compare/1.2.0...HEAD)
+## [Unreleased](https://github.com/greylocklabs/teapot/compare/1.2.0...HEAD)
 
 - N/A
 
-## [1.2.0](https://github.com/greylocklabs/http/compare/1.1.0...1.2.0) - 2018-02-01
+## [2.0.0](https://github.com/greylocklabs/teapot/compare/1.2.0...2.0.0) - 2018-02-02
+
+### Changed
+
+A whole lot! The package has been renamed to `teapot` to make room for the new default export and avoid confusion
+between it and Node's native `http` module. Some other changes:
+
+- `createError` is now `teapot.error`; functionality is the same
+- `status` is now `teapot.status`; functionality is the same
+- Errors can be accessed via the default export `teapot.errors`, or by named import
+- The package bundle now only includes the `dist` folder to shrink size
+- Minor changes to examples
+- Far more extensive test suite
+
+## [1.2.0](https://github.com/greylocklabs/teapot/compare/1.1.0...1.2.0) - 2018-02-01
 
 ### Added
 
@@ -26,14 +40,14 @@ All notable changes to this project will be documented in this file. The format 
 - Classes that inherit `ClientError` or `ServerError` now have a static `code` method to get the
   HTTP status code associated with the error. For example, `NotFoundError.code() === 404`
 
-## [1.1.0](https://github.com/greylocklabs/http/compare/1.0.1...1.1.0) - 2018-01-17
+## [1.1.0](https://github.com/greylocklabs/teapot/compare/1.0.1...1.1.0) - 2018-01-17
 
 ### Changed
 
 - Switch to Node.js Markdown linting tool
 - Update packages
 
-## [1.0.1](https://github.com/greylocklabs/http/compare/1.0.0...1.0.1) - 2017-11-18
+## [1.0.1](https://github.com/greylocklabs/teapot/compare/1.0.0...1.0.1) - 2017-11-18
 
 ### Changed
 
@@ -43,7 +57,7 @@ All notable changes to this project will be documented in this file. The format 
 
 - No longer generating JSDoc files, using Doclets instead
 
-## [1.0.0](https://github.com/greylocklabs/http/releases/tag/1.0.0) - 2017-11-17
+## [1.0.0](https://github.com/greylocklabs/teapot/releases/tag/1.0.0) - 2017-11-17
 
 ### Added
 

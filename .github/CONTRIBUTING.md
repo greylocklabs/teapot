@@ -57,9 +57,10 @@ to ensure you aren't duplicating anyone's work. Then, do the following:
 
 Please follow the coding style conventions detailed below:
 
-1. Just ensure that `npm run lint && npm run flow` passes and you're all set!
+1. Markdown files pass checks run with `npm run lint:md`
+2. JS files pass checks run with `npm run lint:js`
 
 [1]: mailto:ty@greylocklabs.com
-[2]: https://github.com/greylocklabs/http/issues/new
-[3]: https://github.com/greylocklabs/http/compare
-[4]: https://github.com/greylocklabs/http/pulls
+[2]: https://github.com/greylocklabs/teapot/issues/new
+[3]: https://github.com/greylocklabs/teapot/compare
+[4]: https://github.com/greylocklabs/teapot/pulls

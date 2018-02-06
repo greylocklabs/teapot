@@ -1,35 +1,53 @@
 import Koa from 'koa';
 import Router from 'koa-router';
 
-import { createError, errors, status } from '../src';
+import teapot from '../src';
 
 const app = new Koa();
 const router = new Router();
 
-router.get('/api', async (ctx, next) => {
+const statusCodes = teapot.status.codes; // all of the status codes
+
+router.get('/health-check', async (ctx, next) => {
     await next();
 
-    ctx.status = status.OK; // 200
-    ctx.message = status[200]; // 'OK'
+    ctx.status = teapot.status.OK; // 200
     ctx.body = {
-        api: 'running',
+        status: 'good',
+        message: teapot.status[200], // 'OK'
     };
 });
 
 router.get('/errors/404', () => {
-    throw new errors.NotFoundError('Nothing to see here!'); // error exposed to client by default
+    throw new teapot.NotFoundError('Nothing to see here!'); // 404
 });
 
 router.get('/errors/500', () => {
-    throw new errors.InternalServerError('Something broke!'); // logs actual error message but only shows Internal Server Error publicly
+    throw new teapot.InternalServerError('Something broke!'); // 500; Koa will only show message in console
 });
 
-router.get('/custom/:code', (ctx) => {
-    throw createError(ctx.params.code); // throws the error that corresponds to the status code provided
+router.get('/errors/random', () => {
+    const errorCodes = statusCodes.filter((c) => /4|5/.test(c.toString().charAt(0)));
+    const code = errorCodes[Math.floor(Math.random() * errorCodes.length)];
+
+    throw teapot.error(code); // Will have correct status code and default error message for code
+});
+
+router.get('/teapot', async (ctx, next) => {
+    await next();
+
+    const err = new teapot.ImATeapotError('Custom error message');
+
+    ctx.status = teapot.status.IM_A_TEAPOT;
+    ctx.body = {
+        error: err.name,
+        message: err.message,
+        stack: err.stack,
+    };
 });
 
 app.use(router.routes());
 
 app.listen(3000, () => {
-    console.log('App is listening on port 3000...');
+    console.log('App is listening on port 3000...'); // eslint-disable-line no-console
 });

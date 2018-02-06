@@ -26,6 +26,7 @@ const addStatusCodesAndMessages = (func) => {
 
         func[msg] = num;
         func[msg.toLowerCase()] = num;
+        func[msg.toUpperCase()] = num;
         func[num] = msg;
         func[code] = msg;
 
@@ -62,6 +63,8 @@ const status = (input) => {
             }
 
             throw new Error(`Invalid status message ${input}`);
+        } else if (Number(input) % 1 !== 0) {
+            throw new Error(`Invalid status code ${input}; must be an integer`);
         }
 
         return status(Number.parseInt(input));
@@ -78,7 +81,7 @@ const status = (input) => {
  *
  * @returns {boolean} True if code is 1xx
  */
-status.info = (input) => status.codes.includes(Number.parseInt(input)) && String(input).charAt(0) === '1';
+status.isInfo = (input) => status.codes.includes(Number.parseInt(input)) && String(input).charAt(0) === '1';
 
 /**
  * Check if a given status code is a 2xx success response
@@ -88,7 +91,7 @@ status.info = (input) => status.codes.includes(Number.parseInt(input)) && String
  *
  * @returns {boolean} True if code is 2xx
  */
-status.success = (input) => status.codes.includes(Number.parseInt(input)) && String(input).charAt(0) === '2';
+status.isSuccess = (input) => status.codes.includes(Number.parseInt(input)) && String(input).charAt(0) === '2';
 
 /**
  * Check if a given status code is a 3xx redirect response
@@ -98,7 +101,7 @@ status.success = (input) => status.codes.includes(Number.parseInt(input)) && Str
  *
  * @returns {boolean} True if code is 3xx
  */
-status.redirect = (input) => status.codes.includes(Number.parseInt(input)) && String(input).charAt(0) === '3';
+status.isRedirect = (input) => status.codes.includes(Number.parseInt(input)) && String(input).charAt(0) === '3';
 
 /**
  * Check if a given status code is a 4xx client error response
@@ -108,7 +111,7 @@ status.redirect = (input) => status.codes.includes(Number.parseInt(input)) && St
  *
  * @returns {boolean} True if code is 4xx
  */
-status.clientError = (input) => status.codes.includes(Number.parseInt(input)) && String(input).charAt(0) === '4';
+status.isClientError = (input) => status.codes.includes(Number.parseInt(input)) && String(input).charAt(0) === '4';
 
 /**
  * Check if a given status code is a 5xx server error response
@@ -118,7 +121,7 @@ status.clientError = (input) => status.codes.includes(Number.parseInt(input)) &&
  *
  * @returns {boolean} True if code is 5xx
  */
-status.serverError = (input) => status.codes.includes(Number.parseInt(input)) && String(input).charAt(0) === '5';
+status.isServerError = (input) => status.codes.includes(Number.parseInt(input)) && String(input).charAt(0) === '5';
 
 /**
  * Check if a given status code is a 4xx or 5xx response
@@ -128,7 +131,7 @@ status.serverError = (input) => status.codes.includes(Number.parseInt(input)) &&
  *
  * @returns {boolean} True if code is 4xx or 5xx
  */
-status.error = (input) => status.clientError(input) || status.serverError(input);
+status.isError = (input) => status.isClientError(input) || status.isServerError(input);
 
 /**
  * Copy of STATUS_CODES object from Node's http module
@@ -142,9 +145,17 @@ status.STATUS_CODES = http.STATUS_CODES; // copy over http.STATUS_CODES object f
  */
 status.codes = addStatusCodesAndMessages(status); // allow for status[404], status['not found'], and status.codes array
 
+status.codes.infoCodes = status.codes.filter((code) => /1/.test(code.toString().charAt(0)));
+status.codes.successCodes = status.codes.filter((code) => /2/.test(code.toString().charAt(0)));
+status.codes.redirectCodes = status.codes.filter((code) => /3/.test(code.toString().charAt(0)));
+status.codes.clientErrorCodes = status.codes.filter((code) => /4/.test(code.toString().charAt(0)));
+status.codes.serverErrorCodes = status.codes.filter((code) => /5/.test(code.toString().charAt(0)));
+status.codes.errorCodes = status.codes.filter((code) => /4|5/.test(code.toString().charAt(0)));
+
 status.CONTINUE = 100;
 status.SWITCHING_PROTOCOLS = 101;
 status.PROCESSING = 102;
+status.EARLY_HINTS = 103;
 
 status.OK = 200;
 status.CREATED = 201;
