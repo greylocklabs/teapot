@@ -2,7 +2,7 @@
 
 > Utilities for working with HTTP status codes, errors, and more
 
-[![npm version](https://badge.fury.io/js/%40greylocklabs%2Fteapot.svg)](https://badge.fury.io/js/%40greylocklabs%2Fteapot)
+[![npm version](https://badge.fury.io/js/node-teapot.svg)](https://badge.fury.io/js/node-teapot)
 [![Build Status](https://travis-ci.org/greylocklabs/teapot.svg?branch=master)](https://travis-ci.org/greylocklabs/teapot)
 [![Coverage Status](https://coveralls.io/repos/github/greylocklabs/teapot/badge.svg?branch=master)](https://coveralls.io/github/greylocklabs/teapot?branch=master)
 
