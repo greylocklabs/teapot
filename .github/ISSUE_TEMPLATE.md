@@ -31,4 +31,4 @@ Only fill this in if you are filing a bug report.
 
 :question:
 
-[1]: https://github.com/greylocklabs/http/issues
+[1]: https://github.com/greylocklabs/teapot/issues

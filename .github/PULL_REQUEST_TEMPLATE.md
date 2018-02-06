@@ -41,5 +41,5 @@ Provide any other important details below.
 
 :question:
 
-[1]: https://github.com/greylocklabs/http/pulls
-[2]: https://github.com/greylocklabs/http/blob/master/.github/CONTRIBUTING.md#code-style
+[1]: https://github.com/greylocklabs/teapot/pulls
+[2]: https://github.com/greylocklabs/teapot/blob/master/.github/CONTRIBUTING.md#code-style
