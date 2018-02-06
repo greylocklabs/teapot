@@ -8,6 +8,8 @@
 
 ---
 
+![Logo](assets/logo.svg)
+
 Teapot is an HTTP utility library for Node. It provides the following:
 
 1. The ability to get an HTTP status code: `teapot.status(404)` and `teapot.status('not found')` would both
