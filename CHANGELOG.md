@@ -6,11 +6,11 @@ All notable changes to this project will be documented in this file. The format 
 
 ---
 
-## [Unreleased](https://github.com/greylocklabs/teapot/compare/1.2.0...HEAD)
+## [Unreleased](https://github.com/greylocklabs/teapot/compare/2.0.1...HEAD)
 
 - N/A
 
-## [2.0.0](https://github.com/greylocklabs/teapot/compare/1.2.0...2.0.0) - 2018-02-02
+## [2.0.1](https://github.com/greylocklabs/teapot/compare/1.2.0...2.0.1) - 2018-02-06
 
 ### Changed
 

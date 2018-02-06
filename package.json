@@ -1,13 +1,13 @@
 {
     "name": "node-teapot",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "description": "Utilities for working with HTTP status codes, errors, and more",
     "author": {
         "name": "Ty-Lucas Kelley",
         "email": "ty@greylocklabs.com",
         "url": "https://greylocklabs.com"
     },
-    "homepage": "https://github.com/greylocklabs/teapot",
+    "homepage": "https://github.com/greylocklabs/teapot#readme",
     "bugs": "https://github.com/greylocklabs/teapot/issues",
     "repository": {
         "type": "git",
