@@ -1,0 +1,8 @@
+arrowParens: 'always'
+bracketSpacing: true
+printWidth: 100
+semiColon: true
+singleQuote: true
+tabs: false
+tabWidth: 2
+trailingComma: 'es5'

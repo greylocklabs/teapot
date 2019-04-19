@@ -1,6 +1,6 @@
 # Teapot
 
-> Utilities for working with HTTP status codes, errors, and more
+> Utilities for working with HTTP status codes, errors, and more.
 
 [![npm version](https://badge.fury.io/js/node-teapot.svg)](https://badge.fury.io/js/node-teapot)
 [![Build Status](https://travis-ci.org/greylocklabs/teapot.svg?branch=master)](https://travis-ci.org/greylocklabs/teapot)
@@ -10,7 +10,8 @@
 
 ![Logo](assets/logo.svg)
 
-Teapot is an HTTP utility library for Node. It provides the following:
+Teapot is an HTTP utility library for JavaScript, which leverages the
+[Node.js HTTP library](https://nodejs.org/api/http.html). It provides the following:
 
 1. The ability to get an HTTP status code: `teapot.status(404)` and `teapot.status('not found')` would both
    return `404`.
@@ -22,92 +23,61 @@ Teapot is an HTTP utility library for Node. It provides the following:
    instance of `NotFoundError`. Great when handling responses from third-party APIs, when you might not know what
    status codes to expect all the time.
 
+TypeScript definitions are included as well.
+
 ## Installation
 
-Install using `npm` (requires Node.js 7+ to work):
+With `npm`:
 
 ```bash
-$ npm install node-teapot
+$ npm install teapot
+```
+
+With `yarn`:
+
+```bash
+$ yarn add teapot
 ```
 
 ## Usage
 
-Here's a basic web server using the [Koa](http://koajs.com) framework, which illustrates what you can do with this
-library:
+### Get a status code
+
+There are a variety of ways to get a status code from a number or string message:
 
 ```js
-import Koa from 'koa';
-import Router from 'koa-router';
+teapot.status.code(404); // 404
+teapot.status.code('not implemented'); // 405
 
-import teapot from '../src';
+teapot.status.codes['BAD GATEWAY']; // 502
 
-const app = new Koa();
-const router = new Router();
-
-const statusCodes = teapot.status.codes; // all of the status codes
-
-router.get('/health-check', async (ctx, next) => {
-    await next();
-
-    ctx.status = teapot.status.OK; // 200
-    ctx.body = {
-        status: 'good',
-        message: teapot.status[200], // 'OK'
-    };
-});
-
-router.get('/errors/404', () => {
-    throw new teapot.NotFoundError('Nothing to see here!'); // 404
-});
-
-router.get('/errors/500', () => {
-    throw new teapot.InternalServerError('Something broke!'); // 500; Koa will only show message in console
-});
-
-router.get('/errors/random', () => {
-    const errorCodes = statusCodes.filter((c) => /4|5/.test(c.toString().charAt(0)));
-    const code = errorCodes[Math.floor(Math.random() * errorCodes.length)];
-
-    throw teapot.error(code); // Will have correct status code and default error message for code
-});
-
-router.get('/teapot', async (ctx, next) => {
-    await next();
-
-    const err = new teapot.ImATeapotError('Custom error message');
-
-    ctx.status = teapot.status.IM_A_TEAPOT;
-    ctx.body = {
-        error: err.name,
-        message: err.message,
-        stack: err.stack,
-    };
-});
-
-app.use(router.routes());
-
-app.listen(3000, () => {
-    console.log('App is listening on port 3000...');
-});
+teapot.status.MOVED_PERMANENTLY; // 301
 ```
 
-More examples can be found [here](examples)!
+### Get a canned status message
 
-## Documentation
+```js
+teapot.status[200]; // "OK"
+```
 
-The documentation can be viewed [here](https://doclets.io/greylocklabs/teapot/master).
+### Create an HTTP error
 
-## Testing
+Teapot's errors are compatible with Koa and Express:
 
-This library has an extensive test suite, and code coverage is always at 100%. Run the tests as follows:
+```js
+throw new teapot.InternalServerError('Oops! Something went wrong.');
+```
 
-```bash
-$ npm test
+### Generate an error from a status code
+
+```js
+teapot.error(500) // returns instance of InternalServerError
+teapot.error(204) // throws error because 204 is not an error code
 ```
 
 ## Contributing
 
-See [CONTRIBUTING.md](.github/CONTRIBUTING.md) for details.
+See [CONTRIBUTING.md](.github/CONTRIBUTING.md) for guidelines.
 
 ## License
 

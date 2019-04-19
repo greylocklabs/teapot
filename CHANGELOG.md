@@ -6,9 +6,17 @@ All notable changes to this project will be documented in this file. The format 
 
 ---
 
-## [Unreleased](https://github.com/greylocklabs/teapot/compare/2.0.1...HEAD)
+## [Unreleased](https://github.com/greylocklabs/teapot/compare/3.0.0...HEAD)
 
 - N/A
+
+## [3.0.0](https://github.com/greylocklabs/teapot/compare/2.0.1...3.0.0) - 2019-04-18
+
+### Changed
+
+- Moves to TypeScript
+- New APIs - `teapot.status` function replaced with `teapot.status.code`
+- Uses Jest for testing
 
 ## [2.0.1](https://github.com/greylocklabs/teapot/compare/1.2.0...2.0.1) - 2018-02-06
 
@@ -30,7 +38,7 @@ between it and Node's native `http` module. Some other changes:
 
 - A new `createError` function! It lets you take a status code and create the proper `ClientError`
   or `ServerError` that goes with it. Examples:
-    - `const err = clientError(404, 'My not found message');`
+  - `const err = clientError(404, 'My not found message');`
 - Update dependencies
 - Examples updated to use `createError`
 - More tests

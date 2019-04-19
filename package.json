@@ -1,80 +1,81 @@
 {
-    "name": "node-teapot",
-    "version": "2.0.2",
-    "description": "Utilities for working with HTTP status codes, errors, and more",
-    "author": {
-        "name": "Ty-Lucas Kelley",
-        "email": "ty@greylocklabs.com",
-        "url": "https://greylocklabs.com"
-    },
-    "homepage": "https://github.com/greylocklabs/teapot#readme",
-    "bugs": "https://github.com/greylocklabs/teapot/issues",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/greylocklabs/teapot"
-    },
-    "license": "MIT",
-    "keywords": [
-        "http",
-        "error",
-        "status",
-        "koa",
-        "express"
-    ],
-    "main": "dist/index.js",
-    "files": [
-        "dist"
-    ],
-    "scripts": {
-        "reinstall": "rimraf node_modules && npm install",
-        "clean": "rimraf dist",
-        "prebuild": "npm run clean",
-        "build": "babel --no-comments --minified src -d dist",
-        "lint": "npm run lint:js && npm run lint:md",
-        "lint:js": "eslint src/**/*.js test/**/*.js",
-        "lint:md": "markdownlint README.md CHANGELOG.md .github",
-        "flow": "flow",
-        "pretest": "npm run build && npm run lint && npm run flow",
-        "test": "cross-env NODE_ENV=test nyc ava test/{unit,functional}",
-        "coveralls": "nyc report --reporter=text-lcov | coveralls",
-        "prepublishOnly": "npm run build && npm test",
-        "precommit": "npm run lint && npm run flow",
-        "prepush": "npm test"
-    },
-    "engines": {
-        "node": ">= 7"
-    },
-    "ava": {
-        "require": "babel-register",
-        "babel": "inherit",
-        "verbose": true
-    },
-    "devDependencies": {
-        "@greylocklabs/eslint-config": "1.12.2",
-        "ava": "0.25.0",
-        "await-result": "2.2.1",
-        "babel-cli": "6.26.0",
-        "babel-eslint": "8.2.5",
-        "babel-plugin-add-module-exports": "0.2.1",
-        "babel-plugin-istanbul": "4.1.6",
-        "babel-preset-env": "1.7.0",
-        "babel-preset-flow": "6.23.0",
-        "coveralls": "3.0.2",
-        "cross-env": "5.2.0",
-        "eslint": "5.1.0",
-        "eslint-plugin-ava": "4.5.1",
-        "eslint-plugin-flowtype": "2.50.0",
-        "eslint-plugin-import": "2.13.0",
-        "eslint-plugin-promise": "3.8.0",
-        "eslint-plugin-security": "1.4.0",
-        "eslint-plugin-vue": "4.5.0",
-        "express": "4.16.3",
-        "flow-bin": "0.76.0",
-        "husky": "0.14.3",
-        "koa": "2.5.1",
-        "koa-router": "7.4.0",
-        "markdownlint-cli": "0.10.0",
-        "nyc": "12.0.2",
-        "supertest": "3.1.0"
-    }
+  "name": "node-teapot",
+  "version": "3.0.0",
+  "description": "Utilities for working with HTTP status codes, errors, and more",
+  "author": {
+    "name": "Ty-Lucas Kelley",
+    "email": "ty@greylocklabs.com",
+    "url": "https://greylocklabs.com"
+  },
+  "homepage": "https://github.com/greylocklabs/teapot#readme",
+  "bugs": "https://github.com/greylocklabs/teapot/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/greylocklabs/teapot"
+  },
+  "license": "MIT",
+  "keywords": [
+    "http",
+    "rest",
+    "api",
+    "error",
+    "status",
+    "koa",
+    "express"
+  ],
+  "files": [
+    "dist"
+  ],
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "unpkg": "dist/index.umd.js",
+  "scripts": {
+    "clean": "rm -rf dist node_modules",
+    "postclean": "yarn install",
+    "build": "microbundle --external http --no-compress --target node",
+    "lint": "yarn lint:js && yarn lint:md",
+    "lint:js": "eslint src --ext ts",
+    "lint:md": "markdownlint README.md CHANGELOG.md .github",
+    "test": "jest",
+    "test:coverage": "jest --coverage && cat coverage/lcov.info | coveralls",
+    "prepublishOnly": "yarn build && yarn test"
+  },
+  "engines": {
+    "node": ">= 7",
+    "yarn": ">= 1.15.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@greylocklabs/eslint-config": "3.0.3",
+    "@types/express": "4.16.1",
+    "@types/jest": "24.0.11",
+    "@types/koa": "2.0.48",
+    "@types/koa-router": "7.0.40",
+    "@types/node": "11.13.6",
+    "@types/supertest": "2.0.7",
+    "@typescript-eslint/eslint-plugin": "^1.6.0",
+    "@typescript-eslint/parser": "^1.6.0",
+    "@vue/eslint-config-typescript": "^4.0.0",
+    "coveralls": "3.0.3",
+    "eslint": "^5.16.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jest": "^22.4.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-vue": "^5.2.2",
+    "express": "4.16.4",
+    "jest": "24.7.1",
+    "koa": "2.7.0",
+    "koa-router": "7.4.0",
+    "markdownlint-cli": "0.15.0",
+    "microbundle": "0.11.0",
+    "shelljs": "0.8.3",
+    "supertest": "4.0.2",
+    "ts-jest": "24.0.2",
+    "typescript": "^3.4.4"
+  }
 }
