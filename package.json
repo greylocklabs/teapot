@@ -46,8 +46,10 @@
     "yarn": ">= 1.15.2"
   },
   "husky": {
-    "pre-commit": "yarn test",
-    "pre-push": "yarn test"
+    "hooks": {
+      "pre-commit": "yarn test",
+      "pre-push": "yarn test"
+    }
   },
   "devDependencies": {
     "@babel/cli": "^7.4.3",
