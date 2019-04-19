@@ -1,6 +1,6 @@
 {
   "name": "node-teapot",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Utilities for working with HTTP status codes, errors, and more",
   "author": {
     "name": "Ty-Lucas Kelley",
@@ -30,6 +30,7 @@
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "unpkg": "dist/index.umd.js",
+  "types": "dist/src/index.d.ts",
   "scripts": {
     "clean": "rm -rf dist node_modules",
     "postclean": "yarn install",
