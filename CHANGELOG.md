@@ -6,9 +6,15 @@ All notable changes to this project will be documented in this file. The format 
 
 ---
 
-## [Unreleased](https://github.com/greylocklabs/teapot/compare/3.0.0...HEAD)
+## [Unreleased](https://github.com/greylocklabs/teapot/compare/3.0.1...HEAD)
 
 - N/A
+
+## [3.0.1](https://github.com/greylocklabs/teapot/compare/2.0.1...3.0.0) - 2019-04-19
+
+### Fixed
+
+- Correct package name in README + .yarnrc
 
 ## [3.0.0](https://github.com/greylocklabs/teapot/compare/2.0.1...3.0.0) - 2019-04-18
 

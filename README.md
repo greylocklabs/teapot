@@ -30,13 +30,13 @@ TypeScript definitions are included as well.
 With `npm`:
 
 ```bash
-$ npm install teapot
+$ npm install node-teapot
 ```
 
 With `yarn`:
 
 ```bash
-$ yarn add teapot
+$ yarn add node-teapot
 ```
 
 ## Usage
