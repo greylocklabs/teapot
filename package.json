@@ -42,7 +42,7 @@
     "prepublishOnly": "yarn build && yarn test"
   },
   "engines": {
-    "node": ">= 7",
+    "node": ">= 8",
     "yarn": ">= 1.15.2"
   },
   "husky": {
