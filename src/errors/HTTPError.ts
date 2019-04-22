@@ -16,7 +16,10 @@ class HTTPError extends Error {
   constructor(code: number, message: string, options: ErrorOptions = { expose: false }) {
     super(message);
     this.name = this.constructor.name;
-    Error.captureStackTrace(this, this.constructor);
+
+    if (typeof Error.captureStackTrace === 'function') {
+      Error.captureStackTrace(this, this.constructor);
+    }
 
     this.code = code;
     this.status = code;

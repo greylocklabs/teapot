@@ -6,9 +6,15 @@ All notable changes to this project will be documented in this file. The format 
 
 ---
 
-## [Unreleased](https://github.com/greylocklabs/teapot/compare/3.0.4...HEAD)
+## [Unreleased](https://github.com/greylocklabs/teapot/compare/3.0.5...HEAD)
 
 - N/A
+
+## [3.0.5](https://github.com/greylocklabs/teapot/compare/3.0.4...3.0.5) - 2019-04-22
+
+### Fixed
+
+- Check for existence of `Error.captureStackTrace` before calling
 
 ## [3.0.4](https://github.com/greylocklabs/teapot/compare/3.0.2...3.0.4) - 2019-04-22
 
