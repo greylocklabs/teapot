@@ -8,9 +8,9 @@ enum StatusType {
   SERVERERROR = '5',
 }
 
-type StatusCode = string | number;
+export type StatusCode = string | number;
 
-interface StatusCodeMap {
+export interface StatusCodeMap {
   [key: number]: string;
   [key: string]: StatusCode;
 }
