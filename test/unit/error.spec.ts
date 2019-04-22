@@ -22,6 +22,15 @@ describe('teapot.error', () => {
     expect(err.message).toBe('Oops');
   });
 
+  it('creates an error with custom data', () => {
+    const err = teapot.error(errorCode, 'My message', {
+      expose: false,
+      data: { success: false },
+    });
+
+    expect(err.data).toMatchObject({ success: false });
+  });
+
   it('creates the correct HTTPError subclass (ClientError or ServerError) for all valid status codes', () => {
     let err;
 

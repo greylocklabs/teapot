@@ -9,6 +9,8 @@ class HTTPError extends Error {
 
   expose: boolean;
 
+  data?: any;
+
   reservedKeys: string[] = [ 'expose', 'status', 'statusCode', 'name', 'message' ];
 
   constructor(code: number, message: string, options: ErrorOptions = { expose: false }) {
@@ -21,11 +23,14 @@ class HTTPError extends Error {
     this.expose = options.expose;
 
     if (!status.isError(code)) throw new Error(`Invalid status code ${code} = must be 4xx or 5xx`);
+
+    if (options.data) this.data = options.data;
   }
 }
 
 export interface ErrorOptions {
   expose: boolean;
+  data?: any;
 }
 
 export default HTTPError;

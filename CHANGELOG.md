@@ -6,9 +6,15 @@ All notable changes to this project will be documented in this file. The format 
 
 ---
 
-## [Unreleased](https://github.com/greylocklabs/teapot/compare/3.0.2...HEAD)
+## [Unreleased](https://github.com/greylocklabs/teapot/compare/3.0.4...HEAD)
 
 - N/A
+
+## [3.0.4](https://github.com/greylocklabs/teapot/compare/3.0.2...3.0.4) - 2019-04-22
+
+### Added
+
+- Ability to set `data` property on errors, using `teapot.error` function.
 
 ## [3.0.2](https://github.com/greylocklabs/teapot/compare/3.0.1...3.0.2) - 2019-04-19
 

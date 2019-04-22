@@ -73,6 +73,13 @@ throw new teapot.InternalServerError('Oops! Something went wrong.');
 ```js
 teapot.error(500) // returns instance of InternalServerError
 teapot.error(204) // throws error because 204 is not an error code
+
+teapot.error(404, 'My custom message', { // custom message w/ misc. additional properties
+   expose: true,
+   data: {
+      misc: 'blah',
+   },
+})
 ```
 
 ## Contributing
