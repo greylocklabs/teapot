@@ -1,21 +1,22 @@
 {
   "compilerOptions": {
+    "declaration": true,
     "strict": true,
     "module": "esnext",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "esModuleInterop": true,
-    "outDir": "dist",
-    "declaration": true,
     "noUnusedLocals": true,
+    "lib": [
+      "es2017"
+    ],
     "types": [
       "jest",
       "node"
     ]
   },
   "include": [
-    "src/**/*",
-    "test/**/*"
+    "src/**/*"
   ]
 }
