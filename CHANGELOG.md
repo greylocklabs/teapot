@@ -10,6 +10,17 @@ All notable changes to this project will be documented in this file. The format 
 
 - N/A
 
+## [3.1.0](https://github.com/greylocklabs/teapot/compare/3.0.5...3.1.0) - 2019-09-04
+
+### Fixed
+
+- TypeScript type definitions
+
+### Changed
+
+- Dependency upgrades
+- Minor config file changes
+
 ## [3.0.5](https://github.com/greylocklabs/teapot/compare/3.0.4...3.0.5) - 2019-04-22
 
 ### Fixed
