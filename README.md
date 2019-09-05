@@ -3,12 +3,10 @@
 > Utilities for working with HTTP status codes, errors, and more.
 
 [![npm version](https://badge.fury.io/js/node-teapot.svg)](https://badge.fury.io/js/node-teapot)
-[![Build Status](https://travis-ci.org/greylocklabs/teapot.svg?branch=master)](https://travis-ci.org/greylocklabs/teapot)
-[![Coverage Status](https://coveralls.io/repos/github/greylocklabs/teapot/badge.svg?branch=master)](https://coveralls.io/github/greylocklabs/teapot?branch=master)
+[![build status](https://travis-ci.org/greylocklabs/teapot.svg?branch=master)](https://travis-ci.org/greylocklabs/teapot)
+[![coverage status](https://coveralls.io/repos/github/greylocklabs/teapot/badge.svg?branch=master)](https://coveralls.io/github/greylocklabs/teapot?branch=master)
 
 ---
-
-![Logo](assets/logo.svg)
 
 Teapot is an HTTP utility library for JavaScript, which leverages the
 [Node.js HTTP library](https://nodejs.org/api/http.html). It provides the following:
@@ -27,16 +25,16 @@ TypeScript definitions are included as well.
 
 ## Installation
 
-With `npm`:
-
-```bash
-$ npm install node-teapot
-```
-
 With `yarn`:
 
 ```bash
 $ yarn add node-teapot
+```
+
+With `npm`:
+
+```bash
+$ npm install node-teapot
 ```
 
 ## Usage
@@ -84,8 +82,8 @@ teapot.error(404, 'My custom message', { // custom message w/ misc. additional p
 
 ## Contributing
 
-See [CONTRIBUTING.md](.github/CONTRIBUTING.md) for guidelines.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## License
 
-MIT License. See LICENSE file for details.
+MIT License. See [LICENSE](LICENSE) file for details.

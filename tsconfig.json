@@ -1,22 +1,21 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "strict": true,
     "module": "esnext",
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "experimentalDecorators": true,
+    "target": "es5",
+    "strict": true,
+    "jsx": "react",
+    "emitDecoratorMetadata": true,
     "esModuleInterop": true,
-    "noUnusedLocals": true,
-    "lib": [
-      "es2017"
-    ],
-    "types": [
-      "jest",
-      "node"
-    ]
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "sourceMap": true
   },
-  "include": [
-    "src/**/*"
+  "exclude": [
+    "src/__tests__/*",
+    "test"
   ]
 }
