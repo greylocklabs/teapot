@@ -5,7 +5,7 @@ import { ErrorOptions } from '../HTTPError';
 class VariantAlsoNegotiatesError extends ServerError {
   constructor(
     message: string = status.codes[status.VARIANT_ALSO_NEGOTIATES],
-    options: ErrorOptions = { expose: false }
+    options: ErrorOptions = { expose: false },
   ) {
     super(status.VARIANT_ALSO_NEGOTIATES, message, options);
   }

@@ -6,9 +6,15 @@ All notable changes to this project will be documented in this file. The format 
 
 ---
 
-## [Unreleased](https://github.com/greylocklabs/teapot/compare/3.0.5...HEAD)
+## [Unreleased](https://github.com/greylocklabs/teapot/compare/3.1.1...HEAD)
 
 - N/A
+
+## [3.1.1](https://github.com/greylocklabs/teapot/compare/3.1.0...3.1.1) - 2020-02-24
+
+### Changed
+
+- Update dependencies, fix linting errors
 
 ## [3.1.0](https://github.com/greylocklabs/teapot/compare/3.0.5...3.1.0) - 2019-09-04
 
